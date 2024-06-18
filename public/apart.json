@@ -1,0 +1,110 @@
+[
+    {
+        "name":"Lakeview Towers",
+        "apartmentImage": "https://i.postimg.cc/3J6xmF1T/l.jpg",
+        "floorNo": 1,
+        "blockName": "A",
+        "apartmentNo": "101",
+        "rent": 1200,
+        "agreementButton": "https://example.com/agreements/101"
+    },
+    {
+        "name":"Pinecrest Villas",
+        "apartmentImage": "https://i.postimg.cc/hPRCjkWW/download-1.jpg",
+        "floorNo": 2,
+        "blockName": "A",
+        "apartmentNo": "202",
+        "rent": 1300,
+        "agreementButton": "https://example.com/agreements/202"
+    },
+    {
+        "name":"Riverbend Lofts",
+        "apartmentImage": "https://i.postimg.cc/Vsqq75Tp/images.jpg",
+        "floorNo": 3,
+        "blockName": "B",
+        "apartmentNo": "303",
+        "rent": 1400,
+        "agreementButton": "https://example.com/agreements/303"
+    },
+    {
+        "name":"Skyline Terrace",
+        "apartmentImage": "https://i.postimg.cc/zXqn48YB/images-7.jpg",
+        "floorNo": 4,
+        "blockName": "B",
+        "apartmentNo": "404",
+        "rent": 1500,
+        "agreementButton": "https://example.com/agreements/404"
+    },
+    {
+        "name":"Willow Park",
+        "apartmentImage": "https://i.postimg.cc/wjGLtNyy/images-6.jpg",
+        "floorNo": 5,
+        "blockName": "C",
+        "apartmentNo": "505",
+        "rent": 1600,
+        "agreementButton": "https://example.com/agreements/505"
+    },
+    {
+        "name":"Oakwood Estates",
+        "apartmentImage": "https://i.postimg.cc/RFrtdzTv/images-5.jpg",
+        "floorNo": 6,
+        "blockName": "C",
+        "apartmentNo": "606",
+        "rent": 1700,
+        "agreementButton": "https://example.com/agreements/606"
+    },
+    {
+        "name":"Royal Crest ",
+        "apartmentImage": "https://i.postimg.cc/gkcZNs3L/images-1.jpg",
+        "floorNo": 7,
+        "blockName": "D",
+        "apartmentNo": "707",
+        "rent": 1800,
+        "agreementButton": "https://example.com/agreements/707"
+    },
+    {
+        "name":"Majestic Meadows",
+        "apartmentImage": "https://i.postimg.cc/HshJK25Z/lus.jpg",
+        "floorNo": 8,
+        "blockName": "D",
+        "apartmentNo": "808",
+        "rent": 1900,
+        "agreementButton": "https://example.com/agreements/808"
+    },
+    {
+        "name":"Lakeside Haven",
+        "apartmentImage": "https://i.postimg.cc/Jnmnt7qH/download-2.jpg",
+        "floorNo": 9,
+        "blockName": "E",
+        "apartmentNo": "909",
+        "rent": 2000,
+        "agreementButton": "https://example.com/agreements/909"
+    },
+    {
+        "name":"Silent Valley ",
+        "apartmentImage": "https://i.postimg.cc/vBd19tQB/download-3.jpg",
+        "floorNo": 10,
+        "blockName": "E",
+        "apartmentNo": "1010",
+        "rent": 2100,
+        "agreementButton": "https://example.com/agreements/1010"
+    },
+    {
+        "name":"Riverside Retreat",
+        "apartmentImage": "https://i.postimg.cc/d1mh9Z19/download.jpg",
+        "floorNo": 11,
+        "blockName": "F",
+        "apartmentNo": "1111",
+        "rent": 2200,
+        "agreementButton": "https://example.com/agreements/1111"
+    },
+    {
+        "name":"Nilanjan Bari",
+        "apartmentImage": "https://i.postimg.cc/Rhb0kS36/l1.jpg",
+        "floorNo": 12,
+        "blockName": "F",
+        "apartmentNo": "1212",
+        "rent": 2300,
+        "agreementButton": "https://example.com/agreements/1212"
+    }
+]
