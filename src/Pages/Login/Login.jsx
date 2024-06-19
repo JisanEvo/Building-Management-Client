@@ -130,7 +130,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location=useLocation()
     const { signIn } = useContext(AuthContext);
-
+const from=location.state
 
     // Email and password sign-in
     const handleSignIn = async e => {
@@ -146,7 +146,7 @@ const Login = () => {
                 title: "Great",
                 text: "Log in successful",
             });
-            navigate('/');
+            navigate(from,{replace:true} );
         } catch (err) {
             console.log(err);
             Swal.fire({

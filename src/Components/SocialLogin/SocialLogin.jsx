@@ -2,15 +2,20 @@ import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../providers/AuthProviders";
 import { GoogleAuthProvider } from "firebase/auth";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const googleProvider=new GoogleAuthProvider()
 
 const SocialLogin = () => {
     const {googleSignIn}=useContext(AuthContext);
+    const navigate=useNavigate()
+    const location=useLocation()
+    const from=location.state
+
     const handleGoogle=()=>{
         googleSignIn()
         .then(result=>{
-            console.log(result.user)
+          navigate(from,{replace:true})
         })
     }
     return (

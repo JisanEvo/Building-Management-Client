@@ -53,13 +53,17 @@ const Navbar = () => {
                                     <button className="btn btn-sm btn-ghost">{user?.displayName || "Jisan"}</button>
                                 </li>
                                 <li>
+                              <Link to="/dashboard">  <button className="btn btn-sm btn-ghost  " >Dashboard</button></Link>
+                                </li>
+                                <li>
                                     <button className="btn btn-sm btn-ghost" onClick={() => logOut()}>Logout</button>
                                 </li>
+
                             </ul>
                         </div>
                     ) : (
                         <Link to="/login">
-                            <button className="btn btn-sm btn-ghost">Login</button>
+                            <button className="btn btn-sm btn-ghost text-center">Login</button>
                         </Link>
                     )}
 
