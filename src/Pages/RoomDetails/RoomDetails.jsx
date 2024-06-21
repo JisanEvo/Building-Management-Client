@@ -60,7 +60,7 @@ const RoomDetails = () => {
                         <div className="card-body ">
                             <h2 className="card-title text-center items-center ml-16">Apartment No: {room.apartmentNo}</h2>
                             <p className="text-bold text-xl ml-24">Block Name: {room.blockName}</p>
-                            <button className="btn btn-warning justify-center items-center flex">Payment Now</button>
+                            <button className="btn btn-warning justify-center items-center flex">Add to cart</button>
 
                         </div>
                     </div>

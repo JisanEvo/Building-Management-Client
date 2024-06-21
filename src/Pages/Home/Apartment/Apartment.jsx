@@ -11,11 +11,11 @@ const Apartment = () => {
         queryKey: ['apartment'],
         queryFn: async () => {
             const { data } = await axiosSecure.get('/apartment')
-            // console.log(data)
+
             return data
         },
     })
-    console.log(data)
+   
 
 
 

@@ -42,6 +42,13 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dashboard";
 import MyProfile from "../Pages/Dashboard/MyProfile";
 import Announcement from "../Pages/Dashboard/Announcement";
+import Statistics from "../Pages/Dashboard/Common/Statistics";
+import ManageUsers from "../Pages/Dashboard/Admin/ManageUser";
+import AdminProfile from "../Pages/Dashboard/Admin/AdminProfile";
+import MakeAnnouce from "../Pages/Dashboard/Admin/MakeAnnouce";
+import MakePayment from "../Pages/Dashboard/Sidebar/Menu/MemberMenu/MakePayment";
+import PaymentHistory from "../Pages/Dashboard/Sidebar/Menu/MemberMenu/PaymentHistory";
+import Agrement from "../Pages/Dashboard/Sidebar/Menu/AdminMenu/Agrement";
 
 export const router = createBrowserRouter([
   {
@@ -58,7 +65,9 @@ export const router = createBrowserRouter([
       },
       {
         path:"/room/:id",
-        element:<RoomDetails></RoomDetails>
+        element:<PrivateRoute>
+          <RoomDetails></RoomDetails>
+        </PrivateRoute>
       }
     ],
   },
@@ -73,15 +82,64 @@ export const router = createBrowserRouter([
 
   {
  path:"/dashboard",
- element:<Dashboard></Dashboard>,
+ element:<PrivateRoute>
+  <Dashboard></Dashboard>
+ </PrivateRoute>,
+
  children:[
   {
-    path:"user",
-    element:<MyProfile></MyProfile>
+    index:true,
+    element:<PrivateRoute>
+      <Statistics></Statistics>
+    </PrivateRoute>
   },
   {
-    path:"announce",
-    element:<Announcement></Announcement>
+    path:"profile",
+    element:<PrivateRoute>
+      <MyProfile></MyProfile>
+    </PrivateRoute>
+  },
+  {
+    path:"announcement",
+    element:<PrivateRoute>
+      <Announcement></Announcement>
+    </PrivateRoute>
+  },
+  {
+    path:"manage",
+    element:<PrivateRoute>
+      <ManageUsers></ManageUsers>
+    </PrivateRoute>
+  },
+  {
+    path:"adminProfile",
+    element:<PrivateRoute>
+      <AdminProfile></AdminProfile>
+    </PrivateRoute>
+  },
+  {
+    path:"makeAnnounce",
+    element:<PrivateRoute>
+      <MakeAnnouce></MakeAnnouce>
+    </PrivateRoute>
+  },
+  {
+    path:'makePayment',
+    element:<PrivateRoute>
+      <MakePayment></MakePayment>
+    </PrivateRoute>
+  },
+  {
+    path:'paymentHistory',
+    element:<PrivateRoute>
+      <PaymentHistory></PaymentHistory>
+    </PrivateRoute>
+  },
+  {
+    path:'request',
+    element:<PrivateRoute>
+      <Agrement></Agrement>
+    </PrivateRoute>
   }
  ]
   }

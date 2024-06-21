@@ -1,17 +1,37 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import useRole from "../../Hooks/useRole";
+import { MdEmail } from "react-icons/md";
+import Loading from "../../Components/LoadingSpiner/Loading";
+
 
 const MyProfile = () => {
-    const {user}=useContext(AuthContext)
+    const { user, loading } = useContext(AuthContext);
+    const [role, isLoading] = useRole()
+    if (loading || isLoading) return <Loading></Loading>
     return (
-        <div className="w-full max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-        <img className="w-44 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 justify-center flex items-center ml-14" src={user?.photoURL} alt="avatar"/>
 
-        <div className="py-5 text-center">
-            <p href="#" className="block text-xl font-bold text-gray-800 dark:text-white" role="link">{user?.displayName}</p>
-            <span className="text-sm text-gray-700 dark:text-gray-200">{user?.email}</span>
+        <div className="max-w-2xl py-5  justify-center items-center   overflow-hidden  rounded-lg shadow-md  bg-red-200">
+            <div className="flex justify-center items-center">
+                <img className="cover w-64 h-64 rounded-full ring ring-green-500" src={user?.photoURL} alt="Article" />
+            </div>
+            <div>
+
+                <div className="mt-4">
+                    <h1 className="font-bold justify-center flex">Name:{user?.displayName}</h1>
+                    <p className="flex justify-center items-center font-bold"><MdEmail /> :<span className="ml-2">{user?.email}</span>
+                    </p>
+                    <p className="flex font-bold justify-center">Role:  :{role}
+                    </p>
+                </div>
+
+
+
+
+
+
+            </div>
         </div>
-    </div>
     );
 };
 
