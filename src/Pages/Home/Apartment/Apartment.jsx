@@ -15,7 +15,7 @@ const Apartment = () => {
             return data
         },
     })
-   
+
 
 
 
@@ -30,7 +30,7 @@ const Apartment = () => {
     return (
 
         <div className=""> <p className="text-3xl text-red-500 text-center py-10">Our  Luxury Appart</p>
-            <div className="grid   lg: grid-cols-3  grid-cols-1p-10 bg-red-300" style={{ backgroundImage: `url(${bg})`, backgroundAttachment: 'fixed', backgroundSize: 'cover' }}   >
+            <div className="grid lg:grid-cols-3 grid-cols-1 bg-red-300 px-4" style={{ backgroundImage: `url(${bg})`, backgroundAttachment: 'fixed', backgroundSize: 'cover' }}   >
                 {
                     data.map(item => <ApartCard key={item.floorNo} item={item} ></ApartCard>)
                 }

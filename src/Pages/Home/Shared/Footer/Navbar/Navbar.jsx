@@ -7,18 +7,20 @@ import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 import useRole from "../../../../../Hooks/useRole";
 import { MdShoppingCart } from "react-icons/md";
+import useCart from "../../../../../Hooks/useCart";
 
 
 const Navbar = () => {
     const axiosSecure = useAxiosSecure();
     // const [isModalOpen, setIsModalOpen] = useState(false);
     const { user, logOut } = useContext(AuthContext);
-const [role]=useRole()
+    const [role] = useRole()
+  const {cart}=useCart()
 
 
     const [isModalOpen, setIsModalOpen] = useState(false)
     const closeModal = () => {
-      setIsModalOpen(false)
+        setIsModalOpen(false)
     }
 
 
@@ -32,7 +34,7 @@ const [role]=useRole()
             };
             const { data } = await axiosSecure.put(`/user`, currentUser);
             // console.log(data);
-            if(data.modifiedCount >0) {
+            if (data.modifiedCount > 0) {
                 // toast.success('Successfully send!');
                 Swal.fire("Success send your member request!");
 
@@ -52,11 +54,12 @@ const [role]=useRole()
 
 
     const navlink = (
-        <>
-            <li><NavLink to="/">Home</NavLink></li>
+        < >
+            <li><NavLink to="/" className='bg-white'>Home</NavLink></li>
             <li><NavLink to="/apartment">Apartment</NavLink></li>
-            <li><NavLink to="/dashboard/makePayment">Your Cart <MdShoppingCart />
+            <li><NavLink to="myCart"> Cart  <MdShoppingCart className=""/> <p className="badge badge-secondary lg:-ml-2 mb-2">+0{cart?.length}</p>
             </NavLink></li>
+
         </>
     );
 
@@ -74,9 +77,9 @@ const [role]=useRole()
                             {navlink}
                         </ul>
                     </div>
-                    <div className="flex items-center justify-center">
-                        <img className="w-12 h-12 btn-circle" src="../../../../../../public/logo.jpg" alt="Logo" />
-                        <a className="btn btn-ghost text-xl">Heaven</a>
+                    <div className="flex items-center justify-center ">
+                    <img className="w-12 h-12 btn-circle hidden md:block" src="../../../../../../public/logo.jpg" alt="Logo" />
+                        <a className="btn btn-ghost text-xl hidden md:block mt-4">Heaven</a>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -87,7 +90,7 @@ const [role]=useRole()
                 <div className="navbar-end">
                     {user ? (
                         <div className="flex items-center">
-                   {role === 'user' && (
+                            {role === 'user' && (
                                 <button
                                     onClick={() => setIsModalOpen(true)}
                                     className='disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 py-3 px-4 text-sm font-semibold rounded-full transition bg-white'
@@ -95,7 +98,7 @@ const [role]=useRole()
                                     Request Member
                                 </button>
                             )
-                           }
+                            }
                             <HostModal isOpen={isModalOpen} closeModal={closeModal} modalHandler={modalHandler} />
                             <div title={user?.displayName} className="dropdown dropdown-end z-40">
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -120,7 +123,7 @@ const [role]=useRole()
                         </div>
                     ) : (
                         <Link to="/login">
-                            <button className="btn btn-sm btn-ghost text-center">Login</button>
+                            <button className="btn btn-sm btn-ghost text-center bg-white">Login</button>
                         </Link>
                     )}
                 </div>

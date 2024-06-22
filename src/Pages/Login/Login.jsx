@@ -146,7 +146,7 @@ const from=location.state
                 title: "Great",
                 text: "Log in successful",
             });
-            navigate(from,{replace:true} );
+            navigate('/' );
         } catch (err) {
             console.log(err);
             Swal.fire({
