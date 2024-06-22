@@ -3,10 +3,10 @@ import Loading from "../Components/LoadingSpiner/Loading";
 import useRole from "../Hooks/useRole";
 
 const AdminRoutes = ({children}) => {
-    const {role,isLoading}=useRole()
+    const [role,isLoading]=useRole()
     if(isLoading) return <Loading></Loading>
     if(role==='admin') return children
- return <Navigate to='/dashboard'></Navigate>
+ return <Navigate  to="/dashboard"></Navigate>
 
 };
 

@@ -43,7 +43,7 @@ if(loggedInUser.email===user.email){
     }
     try {
       const data = await mutateAsync(userRole)
-      console.log(data)
+      // console.log(data)
     }
     catch (err) {
       // console.log(error)

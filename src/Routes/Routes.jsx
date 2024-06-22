@@ -79,6 +79,7 @@ export const router = createBrowserRouter([
           <Announcement></Announcement>
         </PrivateRoute>
       },
+      // admin routes
       {
         path: "manage",
         element: <PrivateRoute>
@@ -112,12 +113,13 @@ export const router = createBrowserRouter([
           </AdminRoutes>
         </PrivateRoute>
       },
+
       // member routes
       {
         path: 'makePayment',
         element: <PrivateRoute>
           <MemberRoute>
-            <MakePayment></MakePayment>
+            <MakePayment></MakePayment> 
           </MemberRoute>
         </PrivateRoute>
       },

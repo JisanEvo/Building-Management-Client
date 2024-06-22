@@ -1,4 +1,4 @@
-import { FaDollarSign } from "react-icons/fa6";
+
 import useCart from "../../Hooks/useCart";
 import CartBody from "./CartBody";
 import useRole from "../../Hooks/useRole";
@@ -8,10 +8,10 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 import HostModal from "../Modal/HostRequestModal";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 const MyCart = () => {
-    const { cart } = useCart();
+    const [ cart ]= useCart();
     const [role] = useRole();
     const axiosSecure = useAxiosSecure();
     // const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +24,7 @@ const navigate=useNavigate()
 
 
     const modalHandler = async () => {
-        console.log('I want to be a host');
+
         try {
             const currentUser = {
                 email: user?.email,
@@ -114,7 +114,8 @@ const navigate=useNavigate()
                         Request Member
                     </button>
                     <br />
-                    <span className="text-red-600 mt-2" >Only Member & Admin Can Payment.</span>
+                    <br />
+                    <span className="text-red-600 -ml-6" >Only Member  Can Payment.</span>
             </div>
                 )
             }

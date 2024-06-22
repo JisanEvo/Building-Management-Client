@@ -13,7 +13,7 @@ const{user}=useAuth();
         },
     });
 
-    return { cart, isLoading, refetch };
+    return [ cart, isLoading, refetch ];
 };
 
 export default useCart;

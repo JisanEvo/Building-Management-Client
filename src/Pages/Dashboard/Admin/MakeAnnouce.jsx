@@ -49,16 +49,16 @@ const navigate=useNavigate()
         });
 };
     return (
-        <div className=" w-full border border-blue-800 ">
+        <div className=" w-full ">
           <h1 className="text-xl font-bold text-center">New Announcement:</h1>
           <form onSubmit={submitAnnounce}>
              <div className="text-center">
                {/* md */} <h1 className=" font-bold">Announcement Tilte:</h1>
-               <input type="text" name="title"  placeholder="Type here" className="input input-bordered input-md w-full max-w-xs" />
+               <input type="text" name="title"  placeholder="Type here" className="input input-bordered input-md w-full max-w-xs" required />
             <br />
             {/* lg */}
             <h1 className=" font-bold mt-4">Descroption:</h1>
-            <textarea name="description"   placeholder="Type here" className="input input-bordered input-lg w-full max-w-xs "></textarea>
+            <textarea name="description"   placeholder="Type here" className="input input-bordered input-lg w-full max-w-xs " required></textarea>
             <br />
              </div>
         <div className="text-center">

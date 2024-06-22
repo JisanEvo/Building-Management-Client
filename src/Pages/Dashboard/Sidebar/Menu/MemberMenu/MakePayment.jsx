@@ -1,8 +1,19 @@
+import { useState } from "react";
 import CartBody from "../../../../../Components/MyCart/CartBody";
 import useCart from "../../../../../Hooks/useCart";
+import BookingModal from "../../../../../Components/Modal/PaymentModal";
+import useAuth from "../../../../../Hooks/useAuth";
 
 const MakePayment = () => {
-    const { cart } = useCart();
+    const [isOpen,setIsOpen]=useState(false)
+
+    const [cart ]= useCart();
+const singleCart=cart?.map(item=>item)
+console.log(singleCart)
+
+    const closeModal=()=>{
+        setIsOpen(false)
+    }
     const totalPrice=cart?.reduce((total,item)=>total+item.price,0)
     return (
         <div>
@@ -54,7 +65,11 @@ const MakePayment = () => {
                             <th className="text-xl">{totalPrice} Tk</th>
                         </tr>
                     </tfoot>
-                    <button className="btn btn-info ml:5  lg:ml-96 mt-5">Payment Now </button>
+                    <button
+                    onClick={()=>setIsOpen(true)}
+                    className="btn btn-info ml:5  lg:ml-96 mt-5">Payment Now </button>
+                    {/* payment model */}
+                    <BookingModal isOpen={isOpen} closeModal={closeModal} bookingInfo={{...cart,price:totalPrice,guest:{name:''}}}></BookingModal>
                 </div>
             </div>
         </div>

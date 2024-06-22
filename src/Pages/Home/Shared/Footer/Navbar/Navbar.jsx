@@ -15,7 +15,7 @@ const Navbar = () => {
     // const [isModalOpen, setIsModalOpen] = useState(false);
     const { user, logOut } = useContext(AuthContext);
     const [role] = useRole()
-  const {cart}=useCart()
+  const [cart]=useCart()
 
 
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -25,7 +25,7 @@ const Navbar = () => {
 
 
     const modalHandler = async () => {
-        console.log('I want to be a host');
+        // console.log('I want to be a host');
         try {
             const currentUser = {
                 email: user?.email,

@@ -1,8 +1,8 @@
-import React from 'react';
+
 import { FaDollarSign } from 'react-icons/fa';
 
 const CartBody = ({ item }) => {
-    console.log(item)
+    // console.log(item)
     return (
         <tr>
             <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
