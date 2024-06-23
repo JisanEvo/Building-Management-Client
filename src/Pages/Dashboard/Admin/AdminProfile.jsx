@@ -49,7 +49,7 @@ const { data:room } = useQuery({
 
     return (
         <div>
-             <h1>Admin ami Hoye jabe matha nosto</h1>
+             {/* <h1>Admin ami Hoye jabe matha nosto</h1> */}
              <div className="max-w-2xl py-5  justify-center items-center   overflow-hidden  rounded-lg shadow-md  bg-red-200">
             <div className="flex justify-center items-center">
                 <img className="cover w-64 h-64 rounded-full ring ring-green-500" src={user?.photoURL} alt="Article" />

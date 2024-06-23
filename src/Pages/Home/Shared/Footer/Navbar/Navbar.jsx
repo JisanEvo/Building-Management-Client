@@ -78,7 +78,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex items-center justify-center ">
-                    <img className="w-12 h-12 btn-circle hidden md:block" src="../../../../../../public/logo.jpg" alt="Logo" />
+                    <img className="w-12 h-12 btn-circle hidden md:block" src="/logo.jpg" alt="Logo" />
                         <a className="btn btn-ghost text-xl hidden md:block mt-4">Heaven</a>
                     </div>
                 </div>

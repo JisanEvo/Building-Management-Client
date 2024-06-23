@@ -14,21 +14,21 @@ const Banner = () => {
                dynamicHeight={true}
             >
             <div>
-                <img  src="/Banner/b2.png" />
-
+                <img  src="../../public/Banner/b2.png" />
+                 <h1>Hello</h1>
 
                 </div>
                 <div>
 
-                <img  src="/Banner/b3.png" />
+                <img  src="../../public/Banner/b3.png" />
 
                 </div>
                 <div className="h-100px"  >
-                <img  src="/Banner/bs.PNG" />
+                <img  src="../../public/Banner/BIM.jpeg" />
 
                 </div>
                 <div style={{ height: '50vh' }}>
-                <img  src="/Banner/BIM.jpeg" />
+                <img  src="../../public/Banner/bs.PNG" />
 
 
                 </div>

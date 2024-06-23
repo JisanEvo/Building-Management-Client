@@ -118,7 +118,7 @@
 // };
 
 // export default Login;
-import { NavLink,  useLocation,  useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import bg from "../../../public/Banner/los.jpg";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
@@ -128,9 +128,9 @@ import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const Login = () => {
     const navigate = useNavigate();
-    const location=useLocation()
+    const location = useLocation()
     const { signIn } = useContext(AuthContext);
-const from=location.state
+    const from = location.state
 
     // Email and password sign-in
     const handleSignIn = async e => {
@@ -146,7 +146,7 @@ const from=location.state
                 title: "Great",
                 text: "Log in successful",
             });
-            navigate('/' );
+            navigate('/');
         } catch (err) {
             console.log(err);
             Swal.fire({
@@ -177,7 +177,7 @@ const from=location.state
                     <p className="px-3 text-sm text-white">Login with social accounts</p>
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
                 </div>
-                 <SocialLogin></SocialLogin>
+                <SocialLogin></SocialLogin>
                 <p className="text-xs text-center sm:px-6 text-white">
                     Don't have an account?
                     <NavLink to="/signUp">

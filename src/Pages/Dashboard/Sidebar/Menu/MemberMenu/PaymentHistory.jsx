@@ -61,7 +61,7 @@ const PaymentHistory = () => {
             <h2>Payment History</h2>
             {payments && payments.length > 0 ? (
                 <ul>
-                    {payments.map(payment => (
+                    {payments?.map(payment => (
                         <li key={payment.transactionId}>
                             <p>Transaction ID: {payment.transactionId}</p>
                             <p>Date: {new Date(payment.date).toLocaleDateString()}</p>

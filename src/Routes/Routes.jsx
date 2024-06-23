@@ -41,7 +41,11 @@ export const router = createBrowserRouter([
       },
       {
         path: 'myCart',
-        element: <MyCart></MyCart>
+        element: <PrivateRoute>
+          <MemberRoute>
+          <MyCart></MyCart>
+          </MemberRoute>
+        </PrivateRoute>
       }
     ],
   },
@@ -119,7 +123,7 @@ export const router = createBrowserRouter([
         path: 'makePayment',
         element: <PrivateRoute>
           <MemberRoute>
-            <MakePayment></MakePayment> 
+            <MakePayment></MakePayment>
           </MemberRoute>
         </PrivateRoute>
       },
