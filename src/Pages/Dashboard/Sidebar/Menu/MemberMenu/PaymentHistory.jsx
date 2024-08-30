@@ -42,7 +42,7 @@ const PaymentHistory = () => {
     const { data: payments, isLoading, error, refetch } = useQuery({
         queryKey: ['payments', user?.email],
         queryFn: async () => {
-            const { data } = await axiosSecure.get(`/saving?email${user.email}`);
+            const { data } = await axiosSecure.get(`/saving/email${user.email}`);
             return data;
         },
         enabled: !!user?.email // only run the query if user email is available

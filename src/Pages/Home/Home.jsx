@@ -1,5 +1,6 @@
 // import Cover from "../../Components/Cover";
 import Carusel from "../../Components/Carusel";
+import Faq from "../../Components/Faq/Faq";
 // import Banner from "../../Components/Cover";
 import Apartment from "./Apartment/Apartment";
 import Banner from "./Banner/Banner";
@@ -17,6 +18,7 @@ const Home = () => {
            <Banner></Banner>
            {/* <Carusel></Carusel> */}
             <Apartment></Apartment>
+            {/* <Faq></Faq> */}
         </div>
     );
 };

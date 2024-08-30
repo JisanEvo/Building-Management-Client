@@ -28,7 +28,7 @@ const SignUp = () => {
     //   console.log(imageUrl)
                 // Create user
                 const result = await createUser(email, pass);
-                    console.log(result)
+                    // console.log(result)
                 // Optionally, you can save the user profile image URL to your database here
             await updateUserProfile(name,imageUrl)
                 Swal.fire({
